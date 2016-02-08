@@ -4,7 +4,7 @@ Carousel App Demo
 
 This is a walkthrough of the iOS Carousel App for Week 2's assignment.
 
-Time spent: 2.0 hours spent in total
+Time spent: 2.5 hours spent in total
 
 Completed user stories:
 
