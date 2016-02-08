@@ -66,7 +66,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func keyboardWillShow(notification: NSNotification!) {
-        print("keyboardWillShow")
         // Move the button up above keyboard
         buttonParentView.frame.origin.y = buttonInitialY + buttonOffset
         // Scroll the scrollview up
