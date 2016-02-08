@@ -4,7 +4,7 @@ Carousel App Demo
 
 This is a walkthrough of the iOS Carousel App for Week 2's assignment.
 
-Time spent: 2.5 hours spent in total
+Time spent: 4.25 hours spent in total
 
 Completed user stories:
 
@@ -23,19 +23,19 @@ Completed user stories:
  *   [ ] Optional: Tapping the Agree to Terms checkbox selects the checkbox.
  *   [ ] Optional: Tapping on Terms shows a webview with the terms.
  *   [ ] Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
- * [ ] Tutorial Screens
- *   [ ] User can page between the screens
- *   [ ] Optional: User can page between the screens with updated dots
- *   [ ] Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button.
+ * [x] Tutorial Screens
+ *   [x] User can page between the screens
+ *   [x] Optional: User can page between the screens with updated dots
+ *   [x] Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button.
  * [ ] Image Timeline
   * [ ] Display a scrollable view of images.
-  * [ ] User can tap on the conversations button to see the conversations screen (push).
-  * [ ] User can tap on the profile image to see the settings view (modal from below).
- * [ ] Conversations
-  * [ ] User can dismiss the conversations screen
- * [ ] Settings
-  * [ ] User can dismiss the settings screen.
-  * [ ] User can log out
+  * [x] User can tap on the conversations button to see the conversations screen (push).
+  * [x] User can tap on the profile image to see the settings view (modal from below).
+ * [x] Conversations
+  * [x] User can dismiss the conversations screen
+ * [x] Settings
+  * [x] User can dismiss the settings screen.
+  * [x] User can log out
  * [ ] Optional: Learn more about Carousel
   * [ ] Optional: Show the "Learn more about Carousel" button in the photo timeline.
   * [ ] Optional: Tap the X to dismiss the banner
@@ -47,6 +47,7 @@ Completed user stories:
   * [ ] Optional: When all events are completed, dismiss the banner.
 
 Notes:
+Added a Navigation Controller embed to timeline to make push to conversations work.
 
 Walkthrough of all user stories:
 
