@@ -4,7 +4,7 @@ Carousel App Demo
 
 This is a walkthrough of the iOS Carousel App for Week 2's assignment.
 
-Time spent: 4.25 hours spent in total
+Time spent: 4.75 hours spent in total
 
 Completed user stories:
 
@@ -27,8 +27,8 @@ Completed user stories:
  *   [x] User can page between the screens
  *   [x] Optional: User can page between the screens with updated dots
  *   [x] Optional: Upon reaching the 4th page, hide the dots and show the "Take Carousel for a Spin" button.
- * [ ] Image Timeline
-  * [ ] Display a scrollable view of images.
+ * [x] Image Timeline
+  * [x] Display a scrollable view of images.
   * [x] User can tap on the conversations button to see the conversations screen (push).
   * [x] User can tap on the profile image to see the settings view (modal from below).
  * [x] Conversations
