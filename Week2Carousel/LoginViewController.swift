@@ -23,6 +23,10 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     var user_email = "test@domain.com"
     var user_password = "password"
     
+    @IBAction func didPressBack(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
     @IBAction func didPressLogin(sender: AnyObject) {
         if emailField.text == user_email && passwordField.text == user_password {
             loginIndicator.startAnimating()
@@ -77,9 +81,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        // If the scrollView has been scrolled down by 50px or more...
         if scrollView.contentOffset.y <= -50 {
-            // Hide the keyboard
             view.endEditing(true)
         }
     }

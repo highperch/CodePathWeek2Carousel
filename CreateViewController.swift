@@ -1,21 +1,22 @@
 //
-//  TimelineViewController.swift
+//  CreateViewController.swift
 //  Week2Carousel
 //
-//  Created by Justin Peng on 2/8/16.
+//  Created by Justin Peng on 2/9/16.
 //  Copyright © 2016 Justin Peng. All rights reserved.
 //
 
 import UIKit
 
-class TimelineViewController: UIViewController {
+class CreateViewController: UIViewController {
 
-    @IBOutlet weak var timelineScrollView: UIScrollView!
-    @IBOutlet weak var timelineImageView: UIImageView!
+    @IBAction func didPressBack(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timelineScrollView.contentSize = timelineImageView.image!.size
+        
         // Do any additional setup after loading the view.
     }
 
