@@ -24,7 +24,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     var user_password = "password"
     
     @IBAction func didPressBack(sender: AnyObject) {
-        navigationController?.popToRootViewControllerAnimated(true)
+            navigationController?.popToRootViewControllerAnimated(true)
     }
     
     @IBAction func didPressLogin(sender: AnyObject) {

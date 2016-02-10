@@ -10,13 +10,35 @@ import UIKit
 
 class CreateViewController: UIViewController {
 
+    @IBOutlet weak var createButtonParentView: UIView!
+    @IBOutlet weak var createFieldParentView: UIView!
+    
+    var initialY: CGFloat!
+    var offset: CGFloat!
+    
     @IBAction func didPressBack(sender: AnyObject) {
         navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    func keyboardWillShow(notification: NSNotification!) {
+        createFieldParentView.frame.origin.y = initialY + offset
+
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
+        createFieldParentView.frame.origin.y = initialY
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        initialY = createFieldParentView.frame.origin.y
+        offset = -50
+
         // Do any additional setup after loading the view.
     }
 
