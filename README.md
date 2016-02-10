@@ -51,6 +51,7 @@ Completed user stories:
 
 Notes:
 Added a Navigation Controller embed to timeline to make push to conversations work.
+When signing out I instantiated a Navigation Controller instead of using a manually triggered modal segue.
 
 Walkthrough of all user stories:
 
