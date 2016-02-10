@@ -4,7 +4,7 @@ Carousel App Demo
 
 This is a walkthrough of the iOS Carousel App for Week 2's assignment.
 
-Time spent: 4.75 hours spent in total
+Time spent: 6.0 hours spent in total
 
 Completed user stories:
 
@@ -36,6 +36,9 @@ Completed user stories:
  * [x] Settings
   * [x] User can dismiss the settings screen.
   * [x] User can log out
+  * [x] Optional: Tapping the Sign Out button presents a UIAlertController that gives options to Sign Out or Cancel Using UIAlertController
+   * [x] Tapping the Cancel option dismisses the UIAlertController
+   * [x] Tapping the Sign Out returns the user to the NavigationController of the Intro screen
  * [ ] Optional: Learn more about Carousel
   * [ ] Optional: Show the "Learn more about Carousel" button in the photo timeline.
   * [ ] Optional: Tap the X to dismiss the banner
