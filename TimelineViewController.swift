@@ -15,6 +15,8 @@ class TimelineViewController: UIViewController {
     @IBOutlet weak var tutorialBanner: UIImageView!
     @IBOutlet weak var tutorialButton: UIButton!
     @IBOutlet weak var tutorialBannerButton: UIButton!
+    @IBOutlet weak var scrubberScrollView: UIScrollView!
+    @IBOutlet weak var scrubberImageView: UIImageView!
 
     var full_screen_viewed:Bool!
     var time_wheel_used:Bool!
@@ -25,30 +27,41 @@ class TimelineViewController: UIViewController {
     
     @IBAction func hideTutorial(sender: AnyObject) {
         defaults.setBool(true, forKey: "tutorial_dismiss")
-        tutorial_dismissed = true
-        print("tutorial hidden")
-        timelineScrollView.frame.origin.y = 65
-        timelineScrollView.frame.size.height = 467
+        hideTutorial()
     }
     
     @IBAction func openTutorial(sender: AnyObject) {
         performSegueWithIdentifier("tutorialSegue", sender: self)
     }
     
+    func hideTutorial() {
+        timelineScrollView.frame.origin.y = 65
+        timelineScrollView.frame.size.height = 467
+        tutorialBanner.hidden = true
+        tutorialButton.hidden = true
+        tutorialBannerButton.hidden = true
+        tutorialButton.enabled = false
+        tutorialBannerButton.enabled = false
+    }
+    
+    func showTutorial() {
+        timelineScrollView.frame.origin.y = 109
+        timelineScrollView.frame.size.height = 459
+        tutorialBanner.hidden = false
+        tutorialButton.hidden = false
+        tutorialBannerButton.hidden = false
+        tutorialButton.enabled = true
+        tutorialBannerButton.enabled = true
+    }
+    
     func tutorialIsShown() {
-        if full_screen_viewed == true && time_wheel_used == true && photo_shared == true || tutorial_dismissed == true {
-            timelineScrollView.frame.origin.y = 65
-            timelineScrollView.frame.size.height = 467
-            tutorialBanner.hidden = true
-            tutorialButton.hidden = true
-            tutorialBannerButton.hidden = true
+        if tutorial_dismissed == true  {
+            hideTutorial()
+        } else if full_screen_viewed == true && time_wheel_used == true && photo_shared == true {
+            hideTutorial()
         }
         else {
-            timelineScrollView.frame.origin.y = 130
-            timelineScrollView.frame.size.height = 402
-            tutorialBanner.hidden = false
-            tutorialButton.hidden = false
-            tutorialBannerButton.hidden = false
+            showTutorial()
         }
     }
     
@@ -63,7 +76,8 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timelineScrollView.contentSize = timelineImageView.image!.size
-//        tutorialIsShown()
+        scrubberScrollView.contentSize = scrubberImageView.image!.size
+        showTutorial()
         // Do any additional setup after loading the view.
     }
 
