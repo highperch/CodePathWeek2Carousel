@@ -4,12 +4,12 @@ Carousel App Demo
 
 This is a walkthrough of the iOS Carousel App for Week 2's assignment.
 
-Time spent: 7.0 hours spent in total
+Time spent: 11.5 hours spent in total
 
 Completed user stories:
 
- * [ ] Static photo tiles on the initial screen
- * [ ] Optional: Photo tiles move with scrolling
+ * [x] Static photo tiles on the initial screen
+ * [x] Optional: Photo tiles move with scrolling
  * [x] Sign In
   * [x] Tapping on email/password reveals the keyboard and shifts the scrollview and Sign In button up.
  * [x]  Upon tapping the Sign In button.
@@ -40,8 +40,8 @@ Completed user stories:
    * [x] Tapping the Cancel option dismisses the UIAlertController
    * [x] Tapping the Sign Out returns the user to the NavigationController of the Intro screen
  * [ ] Optional: Learn more about Carousel
-  * [ ] Optional: Show the "Learn more about Carousel" button in the photo timeline.
-  * [ ] Optional: Tap the X to dismiss the banner
+  * [x] Optional: Show the "Learn more about Carousel" button in the photo timeline.
+  * [x] Optional: Tap the X to dismiss the banner
   * [ ] Optional: Track the 3 events:
     * [ ] View a photo full screen
     * [ ] Swipe left and right
