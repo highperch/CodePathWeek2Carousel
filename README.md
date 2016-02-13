@@ -55,4 +55,6 @@ When signing out I instantiated a Navigation Controller instead of using a manua
 
 Walkthrough of all user stories:
 
+![week 2 walkthrough gif] (https://cloud.githubusercontent.com/assets/3476345/13025268/0c06ba1c-d1b8-11e5-86ba-ca8a451dbb55.gif)
+
 GIF created with LiceCap.
