@@ -4,7 +4,7 @@ Carousel App Demo
 
 This is a walkthrough of the iOS Carousel App for Week 2's assignment.
 
-Time spent: 11.5 hours spent in total
+Time spent: 14.5 hours spent in total
 
 Completed user stories:
 
@@ -18,10 +18,10 @@ Completed user stories:
     * [x] If the credentials are correct, user sees a loading indicator for 2 seconds followed by a transition to the Sign In screens.
   *  [x] Optional: When the keyboard is visible, if the user pulls down on the scrollview, it will dismiss the keyboard.
   *  [x] Optional: On appear, scale the form up and fade it in.
- * [ ] Optional: Create a Dropbox
+ * [x] Optional: Create a Dropbox
  *   [x] Optional: Tapping in the form reveals the keyboard and shifts the scrollview and "Create a Dropbox" button up.
  *   [x] Optional: Tapping the Agree to Terms checkbox selects the checkbox.
- *   [ ] Optional: Tapping on Terms shows a webview with the terms.
+ *   [x] Optional: Tapping on Terms shows a webview with the terms.
  *   [x] Optional: User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
  * [x] Tutorial Screens
  *   [x] User can page between the screens
@@ -39,15 +39,15 @@ Completed user stories:
   * [x] Optional: Tapping the Sign Out button presents a UIAlertController that gives options to Sign Out or Cancel Using UIAlertController
    * [x] Tapping the Cancel option dismisses the UIAlertController
    * [x] Tapping the Sign Out returns the user to the NavigationController of the Intro screen
- * [ ] Optional: Learn more about Carousel
+ * [x] Optional: Learn more about Carousel
   * [x] Optional: Show the "Learn more about Carousel" button in the photo timeline.
   * [x] Optional: Tap the X to dismiss the banner
-  * [ ] Optional: Track the 3 events:
-    * [ ] View a photo full screen
-    * [ ] Swipe left and right
-    * [ ] Share a photo
-  * [ ] Optional: Upon completion of the events, mark them green.
-  * [ ] Optional: When all events are completed, dismiss the banner.
+  * [x] Optional: Track the 3 events:
+    * [x] View a photo full screen
+    * [x] Swipe left and right
+    * [x] Share a photo
+  * [x] Optional: Upon completion of the events, mark them green.
+  * [x] Optional: When all events are completed, dismiss the banner.
 
 Notes:
 Added a Navigation Controller embed to timeline to make push to conversations work.
