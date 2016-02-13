@@ -19,8 +19,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var introTile5: UIImageView!
     @IBOutlet weak var introTile6: UIImageView!
     
-    let introScrollMin = CGFloat(-20)
-    let introScrollMax = CGFloat(562)
+    let introScrollMin = CGFloat(0)
+    let introScrollMax = CGFloat(568)
     
     func tileTransform(tile_id:UIView, x:Float, y:Float, scale:Float, rotate:Double) {
         tile_id.transform = CGAffineTransformTranslate(tile_id.transform, CGFloat(x), CGFloat(y))
@@ -36,10 +36,10 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         
         tileTransform(introTile1, x: -40, y: -290, scale: 1.1, rotate: -20)
         tileTransform(introTile2, x: 55, y: -260, scale: 1.7, rotate: -18)
-        tileTransform(introTile3, x: 36, y: -445, scale: 1.6, rotate: 18)
+        tileTransform(introTile3, x: 36, y: -445, scale: 1.6, rotate: 15)
         tileTransform(introTile4, x: 95, y: -428, scale: 1.8, rotate: 16)
-        tileTransform(introTile5, x: -120, y: -530, scale: 1.9, rotate: -15)
-        tileTransform(introTile6, x: -65, y: -530, scale: 1.7, rotate: 15)
+        tileTransform(introTile5, x: -120, y: -530, scale: 1.9, rotate: 15)
+        tileTransform(introTile6, x: -65, y: -530, scale: 1.7, rotate: -15)
 
         // Do any additional setup after loading the view.
     }

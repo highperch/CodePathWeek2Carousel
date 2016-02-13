@@ -8,11 +8,15 @@
 
 import UIKit
 
-class TermsViewController: UINavigationController {
+class TermsViewController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
     
     let url = "https://www.dropbox.com/terms?mobile=1"
+    
+    @IBAction func didPressDone(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -20,15 +20,25 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     var buttonInitialY: CGFloat!
     var buttonOffset: CGFloat!
-    var user_email = "test@domain.com"
-    var user_password = "password"
+    var user_email: String!
+    var user_password: String!
+    
+    var defaults = NSUserDefaults.standardUserDefaults()
+    var default_email = "test@domain.com"
+    var default_password = "password"
     
     @IBAction func didPressBack(sender: AnyObject) {
             navigationController?.popToRootViewControllerAnimated(true)
     }
     
     @IBAction func didPressLogin(sender: AnyObject) {
-        if emailField.text == user_email && passwordField.text == user_password {
+        if emailField.text == default_email && passwordField.text == default_password {
+            loginIndicator.startAnimating()
+            delay(2) {
+                self.loginIndicator.stopAnimating()
+                self.performSegueWithIdentifier("signInSegue", sender:self)
+            }
+        } else if emailField.text == user_email && passwordField.text == user_password {
             loginIndicator.startAnimating()
             delay(2) {
                 self.loginIndicator.stopAnimating()
@@ -97,7 +107,10 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         
         buttonInitialY = buttonParentView.frame.origin.y
         buttonOffset = -120
-        
+        user_email = defaults.objectForKey("email") as! String
+        user_password = defaults.objectForKey("password") as! String
+        print(user_email)
+        print(user_password)
         // Do any additional setup after loading the view.
     }
 

@@ -14,11 +14,18 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var createFieldParentView: UIView!
     @IBOutlet weak var agreeButton: UIButton!
     @IBOutlet weak var createScrollView: UIScrollView!
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var createIndicator: UIActivityIndicatorView!
     
     var create_field_initialY: CGFloat!
     var create_field_offset: CGFloat!
     var create_button_initialY: CGFloat!
     var create_button_offset: CGFloat!
+    
+    var defaults = NSUserDefaults.standardUserDefaults()
     
     @IBAction func didPressBack(sender: AnyObject) {
         navigationController?.popToRootViewControllerAnimated(true)
@@ -34,7 +41,36 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func didPressCreate(sender: AnyObject) {
-        if agreeButton.selected == false {
+        if firstName.text!.isEmpty {
+            let firstNameAlertController = UIAlertController(title: "First name missing", message: "Please enter a first name to continue", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            }
+            self.presentViewController(firstNameAlertController, animated: true) {
+            }
+            firstNameAlertController.addAction(okAction)
+        } else if lastName.text!.isEmpty {
+            let lastNameAlertController = UIAlertController(title: "Last name missing", message: "Please enter a last name to continue", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            }
+            self.presentViewController(lastNameAlertController, animated: true) {
+            }
+            lastNameAlertController.addAction(okAction)
+        } else if email.text!.isEmpty {
+            let emailAlertController = UIAlertController(title: "E-mail missing", message: "Please enter an e-mail address to continue", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            }
+            self.presentViewController(emailAlertController, animated: true) {
+            }
+            emailAlertController.addAction(okAction)
+        } else if password.text!.isEmpty {
+            let passwordAlertController = UIAlertController(title: "Password missing", message: "Please enter a password to continue", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            }
+            self.presentViewController(passwordAlertController, animated: true) {
+            }
+            passwordAlertController.addAction(okAction)
+        }
+        else if agreeButton.selected == false {
             let termsAlertController = UIAlertController(title: "Terms of Service", message: "Please agree to the terms of service before continuing", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
             }
@@ -43,7 +79,16 @@ class CreateViewController: UIViewController, UIScrollViewDelegate {
             termsAlertController.addAction(okAction)
         }
         else {
-            self.performSegueWithIdentifier("createSegue", sender: self)
+            createIndicator.startAnimating()
+            defaults.setObject(firstName.text, forKey: "first_name")
+            defaults.setObject(lastName.text, forKey: "last_name")
+            defaults.setObject(email.text, forKey: "email")
+            defaults.setObject(password.text, forKey: "password")
+            defaults.synchronize()
+            delay(2) {
+                self.createIndicator.stopAnimating()
+                self.performSegueWithIdentifier("createSegue", sender: self)
+            }
         }
     }
 
